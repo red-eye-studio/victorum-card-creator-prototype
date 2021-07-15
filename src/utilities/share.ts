@@ -1,4 +1,4 @@
-export const shareImport = (type: string = 'text/plain'): Promise<File[]> =>
+export const shareImport = (type: string = 'text/plain'): Promise<File> =>
   new Promise((resolve) => {
     const input = document.createElement('input')
     input.type = 'file'
@@ -7,7 +7,7 @@ export const shareImport = (type: string = 'text/plain'): Promise<File[]> =>
 
     const handleChange = () => {
       input.removeEventListener('change', handleChange)
-      resolve(input.files?.length ? Array.from(input.files) : [])
+      resolve(input.files![0])
     }
 
     input.addEventListener('change', handleChange)
