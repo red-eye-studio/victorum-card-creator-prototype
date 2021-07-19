@@ -1,14 +1,14 @@
 <template>
-  <menu class='m-0 p-4 h-full w-96 flex flex-col gap-4'>
+  <menu class='m-0 p-4 h-full w-96 flex flex-col gap-4 flex-shrink-0'>
     <Logo />
     <CardList />
     <Share />
   </menu>
   <Card />
-  <div class='flex flex-col p-4 gap-4'>
+  <main class='flex flex-col p-4 gap-4 flex-shrink-0'>
     <Settings />
     <Editor />
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">

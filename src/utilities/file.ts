@@ -17,6 +17,5 @@ export const fileToString = (file: File): Promise<string> => new Promise((resolv
   reader.addEventListener('load', handleLoad)
   reader.addEventListener('error', handleError)
   
-  console.log('readAsDataURL', file)
   reader.readAsDataURL(file)
 })
