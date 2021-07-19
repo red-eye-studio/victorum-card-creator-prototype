@@ -15,7 +15,7 @@
 <script setup lang="ts">
   const props = defineProps<{
     label: string
-    filename?: string
+    filename?: string | null
   }>()
   const emit = defineEmits<{
     (event: 'upload', file: File): void
